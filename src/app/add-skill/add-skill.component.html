@@ -1,3 +1,39 @@
-<p>
-  add-skill works!
-</p>
+<div class="uk-padding">
+
+    <div class="uk-card uk-card-default uk-card-body">
+        <h3 class="uk-card-title">أضف مهارتك</h3>
+    
+  <form>
+    <fieldset class="uk-fieldset">
+
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="الإسم" name="name" [(ngModel)]="name">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="number" placeholder="الهاتف" name="phone" [(ngModel)]="phone">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="المحافظة" name="governorate" [(ngModel)]="governorate">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="الصنعة" name="skill" [(ngModel)]="skill">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="number" placeholder="السعر" name="price" [(ngModel)]="price">
+        </div>
+
+
+        <div class="uk-margin">
+            <textarea class="uk-textarea" rows="5" placeholder="ملاحظات" name="notes" [(ngModel)]="notes"></textarea>
+        </div>
+
+        <div class="uk-margin">
+            <button class="uk-button uk-button-primary">Primary</button>
+        </div>
+
+    </fieldset>
+  </form>
+
+</div>
+
+</div>
