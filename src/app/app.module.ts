@@ -5,13 +5,23 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AddSkillComponent } from './add-skill/add-skill.component';
-
-import { RouterModule, Routes  } from '@angular/router'
-import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AllskillsComponent } from './allskills/allskills.component';
 import { MyskillComponent } from './myskill/myskill.component'
+
+
+import { RouterModule, Routes  } from '@angular/router'
+import { FormsModule } from '@angular/forms';
+
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
+
 
 
 const routes:Routes = [
@@ -40,7 +50,11 @@ const routes:Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
